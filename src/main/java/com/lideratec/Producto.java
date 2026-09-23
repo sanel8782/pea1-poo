@@ -20,8 +20,12 @@ public class Producto {
     }
 
     public void aumentarStock(int cantidad) {
-        stock = stock + cantidad;
-        System.out.println("Nuevo stock "+ stock);
+        if (cantidad > 0) {
+            stock = stock + cantidad;
+            System.out.println("Nuevo stock: " + stock);
+        } else {
+            System.out.println("La cantidad debe ser mayor a 0.");
+        }
     }
 
     public void reducirStock(int cantidad) {
